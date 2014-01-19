@@ -1,15 +1,13 @@
-## Format Apache Access log into HTML based on keyword
-
-### Abstract
-I was looking for a way to log messages from a users browser via javascript with minimal effort. So I thought I could use the Apache Access Log and just produce error messages on a webserver under my control. This way I would also have the users IP address, timestamp, the the user agent and and of course the failed URL. In this URL we can encode the information we want to pass.
+## Apache Access Log Logger
+Using the the Apache Access Log to log calls to non existing URL's. This is a cheap way of logging, where otherwise one would not have access to messages. For example to send debug messages from a script while a user is invoking it in his browser. Logging with the Apache Access Log also provides valueable information about the user like IP address, timestamp, the the user agent and and of course the failed URL. In this URL we can encode the information we want to pass.
 
 ### Setup
-The only thing you need is an apache webserver on which you are allowed to read the access log files.
+The only thing needed is an Apache webserver on which you have the rights to read the access log file.
 
 ### Building URL's
-First of all we need an URL base path that would produce a 404 Error on the webserver. Somehing like this: http://example.com/non_existent/ now we append a tag to that base URL so we can easily identify from which context the Log entry was written. This would look something like this: http://example.com/non_existent/testcontext You can now append as many key value pairs as you like. The only limitation is that keys have to be alphanumeric for example: http://example.com/non_existent/testcontext?key1=value_1&key2=value_2...&keyN=value_N
+First of all you need an URL base path that would produce a 404 Error on the webserver. Somehing like this: http://example.com/non_existent/ now we append a tag to that base URL so we can easily identify from which context the Log entry was written. This would look something like this: http://example.com/non_existent/testcontext if the Tag itself would produce a 404 error it could directly be used as the base path too. You can now append as many key value pairs as you like. The only limitation is that keys have to be alphanumeric for example: http://example.com/non_existent/testcontext?key1=value_1&key2=value_2...&keyN=value_N
 
-Such an URL con now easily be called via jQuery or by simply clicking a link.
+Such an URL con now easily be called via jQuery, by simply clicking a link or which ever other way you want to call an URL.
 
     $.get('http://example.com/non_existent/testcontext?key1=value_1');
     
@@ -24,4 +22,4 @@ Simply call *format.py* with the tag you are looking for and the path to the log
 
     ./format.py testcontext /var/log/apache2/access.log
     
-This will now produce an HTML file which you can then view in the browser. This comes in form of a sortable HTML table.
+This will now produce an HTML file which you can then view in the browser. This comes in form of a sortable and filterable HTML table.
