@@ -7,15 +7,20 @@
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
     <script>
       $(document).ready(function(){
         var options = {
           'placement': 'right',
           'theme': 'bootstrap',
-          'dateFormat': 'yyyy-dd-mm'          
+          'dateFormat': 'yyyy-dd-mm',
         };
         $('.agent').tooltip(options);
-        $('.table').tablesorter();
+
+        options = {
+          'widgets': ['filter'],         
+        }
+        $('.table').tablesorter(options);
       });
     </script>
     <style type="text/css">
@@ -47,10 +52,10 @@
     <table class="table tablesorter-bootstrap table-striped">
       <thead>
         <tr>
-          <th>Date</th>
+          <th class="filter-select filter-match" data-placeholder="Select a date">Date</th>
           <th>Time</th>
-          <th>User</th>
-          <th>Key</th>
+          <th class="filter-select" data-placeholder="Select an IP">IP</th>
+          <th class="filter-select filter-match" data-placeholder="Select a key">Key</th>
           <th>Value</th>
         </tr>
       </thead>
