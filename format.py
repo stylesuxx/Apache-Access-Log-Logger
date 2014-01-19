@@ -30,7 +30,7 @@ def main(args):
 
         output += '''
                   <tr>
-                    <td>''' + date.strftime('%Y-%d-%m') + '''</td>
+                    <td>''' + date.strftime('%d-%m-%Y') + '''</td>
                     <td>''' + date.strftime('%H:%M:%S') + '''</td>
                     <td><a href="#" class="agent" title="''' + agent + '''">''' + ip + '''</a></td>
                     <td>''' + key + '''</td>

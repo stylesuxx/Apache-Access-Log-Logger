@@ -13,12 +13,15 @@
         var options = {
           'placement': 'right',
           'theme': 'bootstrap',
-          'dateFormat': 'yyyy-dd-mm',
         };
         $('.agent').tooltip(options);
 
         options = {
-          'widgets': ['filter'],         
+          'widgets': ['filter'],
+          'sortList': [[0, 1], [1, 1]],
+          'headers': { 
+            0: {'sorter': 'shortDate', 'dateFormat': 'ddmmyyyy'},
+          } 
         }
         $('.table').tablesorter(options);
       });
