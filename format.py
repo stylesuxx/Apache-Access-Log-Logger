@@ -62,7 +62,7 @@ def main(args):
     out.write(html)
     out.close
 
-    print 'Found %i matches for "%s". Open "%s" in your browser.' %(counter, tag, outPath)
+    print 'Found %i matches for "%s". Written to "%s"' %(counter, tag, outPath)
 
   except IOError:
     print 'Log file does not exist or you are not allowed to read it.'
