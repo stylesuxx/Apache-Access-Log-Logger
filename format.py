@@ -6,6 +6,7 @@ def main(args):
   tag = args.tag
   logPath = args.log
   outPath = args.out
+  data = []
   counter = 0;
   output = ''
 
@@ -32,6 +33,8 @@ def main(args):
           key = re.findall('([a-zA-Z0-9]*)\=', pair)[0]
           value = re.findall('[a-zA-Z0-9]*\=(.*)', pair)[0]
 
+          data[] = [1,2,3,4]
+
           output += '''
                     <tr>
                       <td>%s</td>
@@ -41,6 +44,8 @@ def main(args):
                       <td>%s</td>
                     </tr>
                     ''' %(date.strftime('%d-%m-%Y'), date.strftime('%H:%M:%S'), agent, ip, key, value)
+
+    print data
 
     # Replace the placeholders in the template and write output
     html = open('template.html').read()
