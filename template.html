@@ -10,20 +10,20 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.13.3/jquery.tablesorter.widgets.min.js"></script>
     <script>
       $(document).ready(function(){
-        var options = {
+        var toolipOptions = {
           'placement': 'right',
           'theme': 'bootstrap',
         };
-        $('.agent').tooltip(options);
+        $('.agent').tooltip(tooltipOptions);
 
-        options = {
+        tablesorterOptions = {
           'widgets': ['filter'],
           'sortList': [[0, 1], [1, 1]],
           'headers': { 
             0: {'sorter': 'shortDate', 'dateFormat': 'ddmmyyyy'},
           } 
         }
-        $('.table').tablesorter(options);
+        $('.table').tablesorter(tablesorterOptions);
       });
     </script>
     <style type="text/css">
