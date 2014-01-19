@@ -24,7 +24,7 @@
       });
     </script>
     <style type="text/css">
-      .tablesorter-header div:before{
+      .tablesorter-header div:before {
         position: relative;
         top: 1px;
         right: 0;
@@ -38,16 +38,26 @@
         margin-right: 5px;
       }
 
-      .tablesorter-headerAsc div:before{
+      .tablesorter-headerAsc div:before {
         content: '\e094'; 
       }
 
-      .tablesorter-headerDesc div:before{
+      .tablesorter-headerDesc div:before {
         content: '\e093'; 
       }
 
-      tbody td{
+      .tablesorter input {
+        width: 110px !important
+      }
+
+      .tablesorter-filter {
+        width: auto !important;
+        float: left !important;
+      }
+
+      tbody td {
         padding-left: 15px !important;
+        width: auto !important;
       }
 
     </style>
@@ -56,11 +66,11 @@
     <table class="table tablesorter-bootstrap table-striped">
       <thead>
         <tr>
-          <th class="col-sm-2 filter-select filter-match" data-placeholder="Select a date">Date</th>
-          <th class="col-sm-2">Time</th>
-          <th class="col-sm-2 filter-select filter-match" data-placeholder="Select an IP">IP</th>
-          <th class="col-sm-2 filter-select filter-match" data-placeholder="Select a key">Key</th>
-          <th class="col-sm-4">Value</th>
+          <th style="width: 120px;" class="filter-select filter-match" data-placeholder="Select a date">Date</th>
+          <th style="width: 110px;" class="">Time</th>
+          <th style="width: 160px;" class="filter-select filter-match" data-placeholder="Select an IP">IP</th>
+          <th style="width: 160px;" class="filter-select filter-match" data-placeholder="Select a key">Key</th>
+          <th class="">Value</th>
         </tr>
       </thead>
       <tbody>
