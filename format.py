@@ -63,7 +63,7 @@ parser.add_argument('log', metavar = 'LOGFILE', help = 'Path to logfile')
 parser.add_argument('-o',
                     '--out',
                     dest = 'out',
-                    metavar = 'OUTPUT',
+                    metavar = 'OUT',
                     default = False,
                     help = 'Path of the output file')
 
