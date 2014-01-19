@@ -46,17 +46,21 @@
         content: '\e093'; 
       }
 
+      tbody td{
+        padding-left: 15px !important;
+      }
+
     </style>
   </head>
   <body>
     <table class="table tablesorter-bootstrap table-striped">
       <thead>
         <tr>
-          <th class="filter-select filter-match" data-placeholder="Select a date">Date</th>
-          <th>Time</th>
-          <th class="filter-select" data-placeholder="Select an IP">IP</th>
-          <th class="filter-select filter-match" data-placeholder="Select a key">Key</th>
-          <th>Value</th>
+          <th class="col-sm-2 filter-select filter-match" data-placeholder="Select a date">Date</th>
+          <th class="col-sm-2">Time</th>
+          <th class="col-sm-2 filter-select filter-match" data-placeholder="Select an IP">IP</th>
+          <th class="col-sm-2 filter-select filter-match" data-placeholder="Select a key">Key</th>
+          <th class="col-sm-4">Value</th>
         </tr>
       </thead>
       <tbody>
