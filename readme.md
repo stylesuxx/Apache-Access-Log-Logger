@@ -1,7 +1,7 @@
 ## Format Apache Access log into HTML based on keyword
 
 ### Abstract
-I was looking for a way to log messages from a users browser via javascript with minimal effort. So I thought I could use the Apache Access Log and just produce error messages on a webserver under my control. This provides me with the users IP address a timestamp, the user agent and an url. In this URL we can encode the information we want to pass.
+I was looking for a way to log messages from a users browser via javascript with minimal effort. So I thought I could use the Apache Access Log and just produce error messages on a webserver under my control. This way I would also have the users IP address, timestamp, the the user agent and and of course the failed URL. In this URL we can encode the information we want to pass.
 
 ### Setup
 The only thing you need is an apache webserver on which you are allowed to read the access log files.
