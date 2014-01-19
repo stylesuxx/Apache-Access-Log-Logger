@@ -23,3 +23,16 @@ Simply call *format.py* with the tag you are looking for and the path to the log
     ./format.py testcontext /var/log/apache2/access.log
     
 This will now produce an HTML file which you can then view in the browser. This comes in form of a sortable and filterable HTML table.
+
+### Usage
+    usage: format.py [-h] [-o OUT] TAG LOGFILE
+
+    Search for a tag in the apache access log files and format it to sort and filterable HTML table.
+
+    positional arguments:
+      TAG                The tag to look for in the log
+      LOGFILE            Path to logfile
+
+    optional arguments:
+      -h, --help         show this help message and exit
+      -o OUT, --out OUT  Path of the output file
